@@ -1,0 +1,22 @@
+:host {
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(189, 187, 185, 0.4);
+}
+
+.notification-container {
+    text-align: center;
+    background-color: white;
+
+    p {
+        font-size: 18px;
+    }
+}

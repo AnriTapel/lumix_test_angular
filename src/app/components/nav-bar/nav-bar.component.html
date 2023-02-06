@@ -1,0 +1,15 @@
+<header>
+    <mat-toolbar>
+        <mat-form-field>
+            <input type="text" placeholder="Enter query" matInput [formControl]="seachControl" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                <mat-option *ngFor="let option of filteredOptions$ | async" [value]="option">
+                    {{option}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+
+        <button mat-raised-button color="primary" (click)="onSearchClick()">Seacrch</button>
+        <button mat-raised-button (click)="onClearClick()">Clear</button>
+    </mat-toolbar>
+</header>

@@ -1,0 +1,17 @@
+:host {
+    ::ng-deep {
+        .mat-toolbar-single-row {
+            height: auto;
+            padding: 10px 20px;
+            justify-content: center;
+        }
+
+        .mat-form-field {
+            width: 300px;
+        }
+    }
+}
+
+button {
+    margin-left: 20px;
+}

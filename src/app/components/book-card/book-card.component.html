@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-header>
+        <mat-card-title>{{book.title}}</mat-card-title>
+        <mat-card-subtitle>{{getJoinedText(book.subjects)}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <p>Current book is appled to these categories: {{getJoinedText(book.bookshelves)}}</p>
+        <p>It was downloaded {{getBookDownloadCountAsText(book.download_count)}}</p>
+    </mat-card-content>
+</mat-card>
