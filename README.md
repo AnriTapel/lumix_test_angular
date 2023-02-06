@@ -6,22 +6,15 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+## Used API
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+To implement given task was used [Gutendex API](https://gutendex.com) - JSON web API for Project Gutenberg ebook metadata.
+Endpoint: `https://gutendex.com/books`, GET-parameter topic - string param to specify books subject.
 
-## Build
+## Output result limitation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The output result limit is configured by injection token `FETCH_LIMIT_TOKEN` and by default is 10 books per query. Note that this limit does not apply to the query itself because API doesn't provide such parameter. This limit is applied to retrieve the result output.
 
-## Running unit tests
+## Next chunck loading
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Infinite scroll is implemented by loading next chunk of data for the current query. As soon as the user scrolls down to bottom of viewport, URL with next chunk (if such exists) is getting requested.

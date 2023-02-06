@@ -1,0 +1,18 @@
+main {
+    width: 80vw;
+    max-width: 720px;
+    margin: 40px auto 0;
+    padding-bottom: 30px;
+
+    .empty-result-placeholder {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .books-card-container:not(:last-child) {
+        margin-bottom: 20px;
+    }
+}
